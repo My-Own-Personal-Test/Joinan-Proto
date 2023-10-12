@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Kumbh Sans, sans-serif;
+  }
+  label {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
