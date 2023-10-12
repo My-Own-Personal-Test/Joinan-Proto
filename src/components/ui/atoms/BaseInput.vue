@@ -18,10 +18,6 @@ const modelValue = useVModel(props, 'modelValue', emits, { passive: true, defaul
 <template>
   <div>
     <slot />
-    <!-- <label
-      :for="`${props.id}-input`"
-      class="font-semibold"
-    >{{ props.label }}</label> -->
     <input
       :id="`${props.id}-input`"
       v-model="modelValue"

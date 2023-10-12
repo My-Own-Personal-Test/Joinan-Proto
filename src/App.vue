@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ModalLogin from '@/views/loginPage/-components/ModalLogin.vue'
+import LocationDialog from '@/views/loginPage/-components/LocationDialog.vue'
 
 // import { useDark, useToggle } from '@vueuse/core'
 
@@ -18,5 +18,6 @@ import ModalLogin from '@/views/loginPage/-components/ModalLogin.vue'
 
 <template>
   <RouterView />
-  <ModalLogin />
+  <LocationDialog />
+  <AlertRoot />
 </template>

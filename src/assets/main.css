@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+  @apply disabled:bg-disabled disabled:text-neutral-400
+}
+
+label {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 @layer base {
   html {
     font-family: Kumbh Sans, sans-serif;
-  }
-  label {
-    font-weight: 600;
-    text-transform: capitalize;
   }
 }

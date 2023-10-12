@@ -2,6 +2,7 @@
 interface Props {
   class: string | ''
   id: string
+  disabled: boolean
 }
 
 const props = defineProps<Props>()
@@ -11,6 +12,8 @@ const props = defineProps<Props>()
   <button
     :id="`${props.id}-button`"
     :class="cn('btn capitalize', props.class)"
+    :disabled="props.disabled"
+    :aria-disabled="props.disabled"
   >
     <slot />
   </button>

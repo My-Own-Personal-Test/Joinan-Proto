@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const _modalState = useModalState()
+const _dialogState = useDialogState()
 function openModal() {
-  _modalState.modalTrigger({ content: 'modal-login', size: '2xl' })
+  _dialogState.dialogTrigger({ content: 'modal-login', size: '2xl' })
 }
 </script>
 
 <template>
   <div class="min-h-screen grid place-items-center">
-    <CardWrapper class="w-1/2 p-6">
+    <CardRoot class="w-1/2 p-6">
       <div class="pb-8 pt-2 pl-2">
         <img
           src="@/assets/images/JoinanLogo.svg"
@@ -41,13 +41,15 @@ function openModal() {
         </div>
       </div>
 
-      <ButtonWrapper
+      <BaseButton
         id="login"
         class="btn-primary mt-6 mb-10 w-2/3 mx-auto"
+        :disabled="false"
         @click="openModal"
       >
-        masuk
-      </ButtonWrapper>
-    </CardWrapper>
+        <p>masuk</p>
+        <BaseSpinner />
+      </BaseButton>
+    </CardRoot>
   </div>
 </template>

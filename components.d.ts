@@ -7,10 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BaseInput: typeof import('./src/components/ui/base/BaseInput.vue')['default']
-    ButtonWrapper: typeof import('./src/components/ui/global/ButtonWrapper.vue')['default']
-    CardWrapper: typeof import('./src/components/ui/global/CardWrapper.vue')['default']
-    ModalWrapper: typeof import('./src/components/ui/global/ModalWrapper.vue')['default']
+    AlertRoot: typeof import('./src/components/ui/molecules/AlertRoot.vue')['default']
+    BaseButton: typeof import('./src/components/ui/atoms/BaseButton.vue')['default']
+    BaseInput: typeof import('./src/components/ui/atoms/BaseInput.vue')['default']
+    BaseSpinner: typeof import('./src/components/ui/atoms/BaseSpinner.vue')['default']
+    CardRoot: typeof import('./src/components/ui/organisms/CardRoot.vue')['default']
+    DialogRoot: typeof import('./src/components/ui/organisms/DialogRoot.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
