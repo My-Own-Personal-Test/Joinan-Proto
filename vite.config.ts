@@ -9,15 +9,15 @@ export default defineConfig({
   plugins: [
     vue(),
     Components({
-      dirs: ['./src/components/'],
+      dirs: ['./src/components/*/**'],
       dts: true,
     }),
     AutoImport({
       dts: true,
       dirs: [
-        './src/composables',
+        './src/composables/*/**',
         './src/lib',
-        './src/stores',
+        './src/stores/*/**',
       ],
       imports: [
         'vue',

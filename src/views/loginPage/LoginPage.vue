@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import LocationDialog from './-components/LocationDialog.vue'
+
+//
+
 const _dialogState = useDialogState()
-function openModal() {
-  _dialogState.dialogTrigger({ content: 'modal-login', size: '2xl' })
-}
 </script>
 
 <template>
@@ -45,11 +46,12 @@ function openModal() {
         id="login"
         class="btn-primary mt-6 mb-10 w-2/3 mx-auto"
         :disabled="false"
-        @click="openModal"
+        @click="_dialogState.dialogTrigger({ show: true, content: 'location-dialog', size: '3xl' })"
       >
         <p>masuk</p>
         <BaseSpinner />
       </BaseButton>
     </CardRoot>
   </div>
+  <LocationDialog />
 </template>

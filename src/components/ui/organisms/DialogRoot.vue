@@ -7,7 +7,9 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <Teleport to="body">
+  <Teleport
+    to="body"
+  >
     <dialog
       :id="props.id"
       class="modal"

@@ -25,7 +25,13 @@ export const useAlertState = defineStore('alert_state', () => {
   }
 
   function alertTrigger(payload: Payload) {
-    alertState.variant = payload.variant
+    const map = new Map([
+      ['success', 'alert-success'],
+      ['info', 'alert-info'],
+      ['error', 'alert-error'],
+      ['warning', 'alert-warning'],
+    ])
+    alertState.variant = map.get(payload.variant) as string
     alertState.msg = payload.msg
     alertState.show = payload.show
     alertTimeout()

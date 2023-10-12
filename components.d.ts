@@ -15,5 +15,6 @@ declare module 'vue' {
     DialogRoot: typeof import('./src/components/ui/organisms/DialogRoot.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ToastRoot: typeof import('./src/components/ui/molecules/ToastRoot.vue')['default']
   }
 }

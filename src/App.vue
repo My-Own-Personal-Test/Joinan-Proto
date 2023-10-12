@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import LocationDialog from '@/views/loginPage/-components/LocationDialog.vue'
-
 // import { useDark, useToggle } from '@vueuse/core'
 
 // function theme() {
@@ -18,6 +16,6 @@ import LocationDialog from '@/views/loginPage/-components/LocationDialog.vue'
 
 <template>
   <RouterView />
-  <LocationDialog />
   <AlertRoot />
+  <ToastRoot />
 </template>
