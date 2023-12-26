@@ -6,7 +6,7 @@ interface Payload {
 export const useDialogState = defineStore('dialog_state', () => {
   const isOpen = ref(false)
   const size = ref('')
-  const dialogElement = ref<HTMLDialogElement | null> (null)
+  const dialogElement = ref<HTMLDialogElement | null>(null)
 
   function dialogTrigger(payload: Payload) {
     isOpen.value = payload.show
